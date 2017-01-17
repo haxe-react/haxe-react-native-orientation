@@ -9,11 +9,11 @@ extern class Orientation {
 	public static function lockToLandscapeRight():Void;
 	public static function lockToLandscapeLeft():Void;
 	public static function unlockAllOrientations():Void;
-	public static function addOrientationListener(cb:Void->Void):Void;
-	public static function addSpecificOrientationListener(cb:Void->Void):Void;
-	public static function removeOrientationListener(cb:Void->Void):Void;
-	public static function removeSpecificOrientationListener(cb:Void->Void):Void;
-	public static function getInitialOrientation():Void;
+	public static function addOrientationListener(cb:OrientationDirection->Void):Void;
+	public static function addSpecificOrientationListener(cb:SpecificOrientationDirection->Void):Void;
+	public static function removeOrientationListener(cb:OrientationDirection->Void):Void;
+	public static function removeSpecificOrientationListener(cb:SpecificOrientationDirection->Void):Void;
+	public static function getInitialOrientation():OrientationDirection;
 }
 
 @:enum abstract OrientationDirection(String) {
